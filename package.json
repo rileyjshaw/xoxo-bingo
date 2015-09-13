@@ -12,7 +12,8 @@
     "jade": "^1.11.0",
     "morgan": "^1.6.1",
     "passport": "^0.3.0",
-    "passport-twitter": "^1.0.3"
+    "passport-twitter": "^1.0.3",
+    "seedrandom": "^2.4.2"
   },
   "devDependencies": {
     "babelify": "^6.3.0",

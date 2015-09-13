@@ -1,4 +1,3 @@
-// TODO(rjs): stub
 var fs = require('fs');
 var seedrandom = require('seedrandom');
 
