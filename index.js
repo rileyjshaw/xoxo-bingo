@@ -8,6 +8,11 @@ const Strategy = require('passport-twitter').Strategy;
 
 const attendeeGrid = require('./attendee-grid');
 
+<<<<<<< HEAD
+=======
+const port = process.env.PORT || 8080;
+
+>>>>>>> db8683f... Fix up copy on main page
 // Configure the Twitter strategy for use by Passport
 passport.use(new Strategy({
       consumerKey: process.env.CONSUMER_KEY,
@@ -51,10 +56,12 @@ app.get('/', ({user}, res) => res.render('home', {
   attendeeGrid: attendeeGrid(user && user.username),
 }));
 
-app.get('/login/twitter', passport.authenticate('twitter'));
-app.get('/login/twitter/return', passport.authenticate('twitter', {
-  failureRedirect: '/'
-}), (req, res) => res.redirect('/'));
+app.get('/login/twitter',
+  passport.authenticate('twitter'));
+
+app.get('/login/twitter/return',
+  passport.authenticate('twitter', { failureRedirect: '/' }),
+  (req, res) => res.redirect('/'));
 
 // TODO(rjs): only expose these to authenticated users
 app.get('/farewell', (req, res) => res.render('farewell'));
