@@ -52,3 +52,5 @@ gulp.task('watch', function () {
   gulp.watch('./main.es6.js', ['scripts']);
   gulp.watch('./main.sass', ['sass']);
 });
+
+gulp.task('default', [ 'scripts', 'sass', 'watch' ] );
