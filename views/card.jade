@@ -1,0 +1,9 @@
+// Woah I'm actually using one of these
+table
+  each row in attendeeGrid
+    tr
+      each handle in row
+        td
+          a(href='https://twitter.com/#{handle}')
+            h2= handle
+            img.avatar(src='avatars/#{handle}.png')

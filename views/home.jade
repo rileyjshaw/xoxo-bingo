@@ -1,0 +1,10 @@
+extends ./default.jade
+
+block title
+  title Friend Bingo at XOXO!
+
+block content
+  if user
+    include ./card
+  else
+    p Welcome! Please #[a(href='/login/twitter') log in].

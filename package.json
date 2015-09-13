@@ -1,0 +1,44 @@
+{
+  "name": "xoxo-bingo-server",
+  "version": "1.0.0",
+  "description": "Make some pretty bingo cards",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "babel": "^5.8.23",
+    "body-parser": "^1.13.3",
+    "cookie-parser": "^1.3.5",
+    "express": "^4.13.3",
+    "express-session": "^1.11.3",
+    "jade": "^1.11.0",
+    "morgan": "^1.6.1",
+    "passport": "^0.3.0",
+    "passport-twitter": "^1.0.3"
+  },
+  "devDependencies": {
+    "babelify": "^6.3.0",
+    "browserify": "^11.1.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-gh-pages": "^0.5.2",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.4.1",
+    "gulp-util": "^3.0.6",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rileyjshaw/xoxo-bingo.git"
+  },
+  "author": "eli feasley <eliana.io>, rileyjshaw <rileyjshaw.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rileyjshaw/xoxo-bingo/issues"
+  },
+  "homepage": "https://github.com/rileyjshaw/xoxo-bingo#readme"
+}
