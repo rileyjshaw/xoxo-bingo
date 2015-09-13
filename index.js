@@ -12,8 +12,7 @@ const attendeeGrid = require('./attendee-grid');
 passport.use(new Strategy({
       consumerKey: process.env.CONSUMER_KEY,
       consumerSecret: process.env.CONSUMER_SECRET,
-      // TODO(rjs): use an env variable for this
-      callbackURL: 'http://127.0.0.1:3000/login/twitter/return'
+      callbackURL: `http://${process.env.URL}:3000/login/twitter/return`
     }, (token, tokenSecret, profile, cb) => cb(null, profile)
   ));
 
