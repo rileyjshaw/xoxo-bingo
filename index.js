@@ -37,7 +37,7 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 // TODO(rjs): Actually configure this and use proper store
 app.use(expressSession({
-  secret: 'keyboard cat',
+  secret: process.env.SESSION_SECRET,
   resave: true,
   saveUninitialized: true
 }));
