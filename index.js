@@ -60,6 +60,11 @@ app.get('/login/twitter/return',
   passport.authenticate('twitter', { failureRedirect: '/' }),
   (req, res) => res.redirect('/'));
 
+app.get('/logout', (req, res) => {
+  req.logout();
+  res.redirect('/');
+});
+
 // TODO(rjs): only expose these to authenticated users
 app.get('/farewell', (req, res) => res.render('farewell'));
 // TODO(rjs): allow users to remove themselves from the experiment
