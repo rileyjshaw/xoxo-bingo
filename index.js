@@ -14,7 +14,7 @@ const port = process.env.PORT || 5000;
 passport.use(new Strategy({
       consumerKey: process.env.CONSUMER_KEY,
       consumerSecret: process.env.CONSUMER_SECRET,
-      callbackURL: `http://${process.env.URL}:${port}/login/twitter/return`
+      callbackURL: `http://${process.env.URL}/login/twitter/return`
     }, (token, tokenSecret, profile, cb) => cb(null, profile)
   ));
 
