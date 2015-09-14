@@ -8,16 +8,13 @@ const Strategy = require('passport-twitter').Strategy;
 
 const attendeeGrid = require('./attendee-grid');
 
-<<<<<<< HEAD
-=======
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 5000;
 
->>>>>>> db8683f... Fix up copy on main page
 // Configure the Twitter strategy for use by Passport
 passport.use(new Strategy({
       consumerKey: process.env.CONSUMER_KEY,
       consumerSecret: process.env.CONSUMER_SECRET,
-      callbackURL: `http://${process.env.URL}:3000/login/twitter/return`
+      callbackURL: `http://${process.env.URL}:${port}/login/twitter/return`
     }, (token, tokenSecret, profile, cb) => cb(null, profile)
   ));
 
@@ -72,4 +69,4 @@ app.get('/remove-me-from-the-experiment-plz', ({user}, res) => {
   res.redirect('/');
 });
 
-app.listen(3000);
+app.listen(port);
