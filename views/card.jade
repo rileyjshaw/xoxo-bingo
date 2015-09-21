@@ -4,10 +4,10 @@ h1 BINGOXO!!
 table
   each row in attendeeGrid
     tr
-      each handle in row
+      each person in row
         td
-          a(href='https://twitter.com/#{handle}')
-            img.avatar(src='avatars/#{handle}.png')
-            h2= '@' + handle
+          a(href=person.link)
+            img.avatar(src=person.image)
+            h2=person.name
 
 a.logout(href='/logout') Log out

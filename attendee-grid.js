@@ -31,7 +31,9 @@ var shuffle = function(set, rng) {
     var shuffled = Array(length);
     for (var index = 0, rand; index < length; index++) {
         rand = Math.floor(rng() * index);
-        if (rand !== index) {shuffled[index] = shuffled[rand];}
+        if (rand !== index) {
+            shuffled[index] = shuffled[rand];
+        }
         shuffled[rand] = set[index];
     }
     return shuffled;
@@ -52,7 +54,9 @@ var attendeeListForUsername = function(username) {
 var arrayIndexFromCoords = function(row, column, handles, handlesSoFar) {
     var index = squareSize * row + column;
     var handle = handles[handlesSoFar];
-    if (blacklist.indexOf(handle) === -1) {return index;}
+    if (blacklist.indexOf(handle) === -1) {
+        return index;
+    }
 
     var lastGridIndex = squareSize * squareSize;
     // if the intended bingo person is on the blacklist, remove them from
@@ -74,6 +78,14 @@ var userForLocation = function(
     return handles[arrayIndexFromCoords(row, column, handles, handlesSoFar)];
 };
 
+var avatarFor = function(handle, username) {
+    if (handle === username) {
+        return "https://twitter.com/" + username + "/profile_image?size=bigger";
+    }
+    return 'avatars/' + handle + '.png';
+};
+
+
 var attendeeGrid = function(username) {
     var handles = attendeeListForUsername(username);
     var card = [];
@@ -86,7 +98,11 @@ var attendeeGrid = function(username) {
             handle = userForLocation(
                 row, column, handles, username,
                 handlesSoFar);
-            bingoRow.push(handle);
+            bingoRow.push({
+                'name': '@' + handle,
+                'link': 'http://twitter.com/' + handle,
+                'image': avatarFor(handle, username)
+            });
         }
         card.push(bingoRow);
     }
