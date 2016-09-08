@@ -37,6 +37,13 @@ h2 {
   left: 0px;
   margin: 0; }
 
+ul {
+  list-style: none;
+  padding: 0; }
+
+li:before {
+  content: '- '; }
+
 td a {
   position: relative;
   display: block; }
