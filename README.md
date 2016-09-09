@@ -36,6 +36,13 @@ heroku local web -p 9001
 git push heroku master
 
 
+NOTES
+-----
+
+# ImageMagick dither settings:
+convert <input_img> -colorspace Gray -ordered-dither o2x2 output.png
+
+
 LICENSE
 -------
 
