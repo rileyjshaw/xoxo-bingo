@@ -34,10 +34,10 @@ heroku config -s >> .env
 heroku local web -p 9001
 # then some more?
 git push heroku master
-```
 
 
 LICENSE
 -------
 
 public domain, be yourself!
+```
