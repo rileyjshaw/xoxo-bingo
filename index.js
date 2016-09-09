@@ -49,8 +49,8 @@ app.use(passport.session());
 
 // Define routes
 app.get('/', ({user}, res) => res.render('home', {
-  user: 'eli_awry' || user && user.username,
-  attendeeGrid: attendeeGrid('eli_awry' || user && user.username),
+  user: user && user.username,
+  attendeeGrid: attendeeGrid(user && user.username),
 }));
 
 app.get('/login/twitter',
