@@ -14,7 +14,8 @@ var squareCenter = Math.floor(squareSize / 2);
 var followers = JSON.parse(fs.readFileSync('static/public/twitter_lists/folks.json', 'utf8'));
 var blacklist = [];
 // TODO(eli): Grab attendees from a sqlite database
-var attendees = [];
+var attendeesImages = JSON.parse(fs.readFileSync('static/public/twitter_lists/attendees.json', 'utf8'));
+var attendees = Object.keys(attendeesImages);
 
 var bingoFriendHandles = function(username) {
     var is_attendee = attendees.indexOf(username) !== -1;
@@ -80,7 +81,7 @@ var userForLocation = function(
 
 var avatarFor = function(handle, username) {
     if (handle === username) {
-        return "https://twitter.com/" + username + "/profile_image?size=bigger";
+        return attendeesImages[username];
     }
     return 'avatars/' + handle + '.png';
 };
