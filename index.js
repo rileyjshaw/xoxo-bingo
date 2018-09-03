@@ -25,9 +25,9 @@ passport.deserializeUser((obj, cb) => cb(null, obj));
 // Create a new Express application
 const app = express();
 
-// Configure view engine to render jade templates
+// Configure view engine to render pug templates
 app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 // Use application-level middleware for common functionality, including
 // logging, parsing, static asset serving, and session handling
