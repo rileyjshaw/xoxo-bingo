@@ -179,10 +179,10 @@ squares.forEach(function (square, i) {
   var goal = goalz[i];
   if (!goal) return;
 
-  var iconImg = '<img class="icon" src="./icons/' + goal.icon + '.svg" alt="' + goal.attrib + '" />';
+  var iconImg = '<img class="icon" src="./icons/' + goal.icon + '.svg" alt="' + goal.title + '" />' + '<!-- ' + goal.attrib + '-->';
   console.log(dones[i]);
   square.innerHTML = dones[i]
-    ? '<img class="icon" src="./icons/' + goal.icon + '_grey.svg" alt="' + goal.attrib + '" />' +
+    ? '<img class="icon" src="./icons/' + goal.icon + '_grey.svg" alt="' + goal.title + '" />' + '<!-- ' + goal.attrib + '-->'+
           ((i % 2) ? '<p class="pink">X</p>' : '<p class="pink">O</p>')
     : iconImg;
 
@@ -205,7 +205,7 @@ squares.forEach(function (square, i) {
       });
 
       modal.addFooterBtn('i did it!', 'tingle-btn tingle-btn--primary tingle-btn--pull-right', function () {
-        square.innerHTML = '<img class="icon" src="./icons/' + goal.icon + '_grey.svg" alt="' + goal.attrib + '" />' +
+        square.innerHTML = '<img class="icon" src="./icons/' + goal.icon + '_grey.svg" alt="' + goal.title + '" />' + '<!-- ' + goal.attrib + '-->'+
           ((i % 2) ? '<p class="pink">X</p>' : '<p class="pink">O</p>');
 
         goal.isDone = true;
