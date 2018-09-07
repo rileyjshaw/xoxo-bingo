@@ -113,7 +113,7 @@ var goalz = [
     icon: 'eat',
     attrib: 'food chat by corpus delicti from the Noun Project',
     title: 'eat and greet',
-    description: 'have a meal with people who are complete strangers / future friends',
+    description: 'have a meal with people who are complete strangers/future friends',
   },
   {
     icon: 'bird',

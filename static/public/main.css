@@ -5,21 +5,27 @@
 
 body {
   font-family: Syne;  /* Inconsolata */
-  width: 600px;
+  max-width: 600px;
   margin: auto;
   padding-top: 24px;
+  font-size: 2em;
 }
 
 table {
   border: 2px solid #000;
   padding: 25px;
-  margin: auto;
+  margin: 0;
+  width: 100%;
 }
 
 h2 {
   text-align: center;
   color: darkgrey;
   font-size: 10px;
+}
+
+.tingle-modal-box__footer {
+  font-size: 0.6em;
 }
 
 table a {
@@ -71,10 +77,18 @@ td a {
   width: 80px;
 }
 
+tr {
+  display: flex;
+}
+
+td {
+  width: 20%;
+  height: 0;
+  padding: 10% 0;
+}
+
 .goalz {
   cursor: pointer;
-  width: 100px;
-  height: 100px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -83,6 +97,10 @@ td a {
 
 .icon {
   width: 40px;
+}
+
+table .icon {
+  width: 36%;
 }
 
 .teal {
@@ -126,6 +144,10 @@ table, .rulez {
   padding-bottom: 1rem !important;
 }
 
+.tingle-modal-box__content p {
+  text-align: center;
+}
+
 .goalz p {
   position: absolute;
   top: 46.5%;
@@ -153,7 +175,7 @@ table, .rulez {
 
 .rulez strong {
   margin-left: .6em;
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 .end {
