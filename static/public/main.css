@@ -148,6 +148,10 @@ table, .rulez {
   text-align: center;
 }
 
+sup {
+  font-size: 0.5em;
+}
+
 .goalz p {
   position: absolute;
   top: 46.5%;
