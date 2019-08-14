@@ -1,0 +1,187 @@
+@font-face {
+  font-family: Syne;
+  src: url(Syne-Regular.otf);
+}
+
+body {
+  font-family: Syne;  /* Inconsolata */
+  max-width: 800px;
+  margin: auto;
+  padding-top: 24px;
+  font-size: 2em;
+}
+
+table {
+  border: 2px solid #000;
+  padding: 25px;
+  margin: 0;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  color: darkgrey;
+  font-size: 10px;
+}
+
+.tingle-modal-box__footer {
+  font-size: 0.6em;
+}
+
+table a {
+  text-decoration: none;
+  color: #000;
+}
+
+h1 {
+  text-align: center;
+  font-size: 42px;
+}
+
+h2 {
+  text-align: center;
+  color: #000;
+  background: #fff;
+  padding: 0.4em;
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/*li:before {
+  content: '- ';
+}*/
+
+td a {
+  position: relative;
+  display: block;
+}
+
+.logout {
+  display: block;
+  text-align: center;
+  padding-top: 16px;
+}
+
+.divider {
+  text-align: center;
+}
+
+.logo {
+  width: 80px;
+}
+
+tr {
+  display: flex;
+}
+
+td {
+  width: 20%;
+  height: 0;
+  padding: 10% 0;
+}
+
+.goalz {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.icon {
+  width: 40px;
+}
+
+table .icon {
+  width: 36%;
+}
+
+.teal {
+  color: #0098a5;
+}
+
+.green {
+  color: #73c92d;
+}
+
+.pink {
+  color: #fc2458;
+}
+
+.modal .tingle-modal-box {
+  width: 500px;
+}
+
+.modal img {
+  vertical-align: middle;
+  margin-right: .5em;
+  width: 80px;
+}
+
+.modal h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 1em;
+}
+
+table, .rulez {
+  visibility: hidden;
+}
+
+.okayShowItNowIGuess {
+  visibility: visible;
+}
+
+.tingle-modal-box__content {
+  padding-bottom: 1rem !important;
+}
+
+.tingle-modal-box__content p {
+  text-align: center;
+}
+
+sup {
+  font-size: 0.5em;
+}
+
+.goalz p {
+  position: absolute;
+  top: 46.5%;
+  left: 50%;
+  font-size: 48px;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-weight: 900;
+  line-height: 1;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.rulez {
+  text-align: center;
+}
+
+.rulez li {
+  padding: 1em 0;
+}
+
+.rulez img, .rulez strong {
+  display: inline;
+  vertical-align: middle;
+}
+
+.rulez strong {
+  margin-left: .6em;
+  font-size: 1.5em;
+}
+
+.end {
+  text-align: center;
+}
