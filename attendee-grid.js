@@ -8,14 +8,15 @@ var squareSize = 5;
 var squareCenter = Math.floor(squareSize / 2);
 
 
-// TODO(eli): Make it so we can read from a database,
+// TODO(lol): Make it so we can read from a database,
 // so that we can show xoxo attendees now that our code is
 // open source
 var followers = JSON.parse(fs.readFileSync('static/public/twitter_lists/folks.json', 'utf8'));
 var blacklist = [];
-// TODO(eli): Grab attendees from a sqlite database
-var attendeesImages = JSON.parse(fs.readFileSync('static/public/twitter_lists/attendees.json', 'utf8'));
-var attendees = Object.keys(attendeesImages);
+
+// TODO(lol): Grab attendees from a database
+var attendeesImages = [];
+var attendees = [];
 
 var bingoFriendHandles = function(username) {
     var is_attendee = attendees.indexOf(username) !== -1;
