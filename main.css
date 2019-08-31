@@ -11,6 +11,10 @@ body {
   font-size: 2em;
 }
 
+p {
+  font-family: 'IBM Plex Serif', serif;
+}
+
 table {
   border: 2px solid #000;
   padding: 25px;
@@ -162,7 +166,6 @@ sup {
   margin: 0;
   font-weight: 900;
   line-height: 1;
-  font-family: 'IBM Plex Serif', serif;
 }
 
 .rulez {
