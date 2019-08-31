@@ -53,7 +53,7 @@ var goalz = [
     icongrey: 'andys_grey',
     attrib: '',
     title: 'starstruck',
-    description: 'talk to one of the Andy’s in person',
+    description: 'talk to one of the Andys in person',
   },
   {
     icon: 'game',
