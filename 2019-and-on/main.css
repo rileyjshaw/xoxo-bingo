@@ -1,14 +1,18 @@
 @font-face {
-  font-family: Syne;
-  src: url(Syne-Regular.otf);
+  font-family: Woodland;
+  src: url(PPWoodland-Bold.otf);
 }
 
 body {
-  font-family: Syne;  /* Inconsolata */
+  font-family: Woodland;
   max-width: 800px;
   margin: auto;
   padding-top: 24px;
   font-size: 2em;
+}
+
+p {
+  font-family: 'IBM Plex Serif', serif;
 }
 
 table {
@@ -162,7 +166,6 @@ sup {
   margin: 0;
   font-weight: 900;
   line-height: 1;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .rulez {
