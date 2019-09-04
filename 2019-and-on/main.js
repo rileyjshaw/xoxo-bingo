@@ -19,10 +19,10 @@ var goalz = [
     description: 'tell someone about XOXO who hasn\'t heard of it',
   },
   {
-    icon: 'carriage',
+    icon: 'pin',
     attrib: 'Illustrated by Julia Skott: juliaskott.com',
-    title: 'cinderella',
-    description: 'stay until closing',
+    title: 'pinnacle',
+    description: 'trade a pin, patch, sticker, or zine with someone',
   },
   {
     icon: 'casual',
