@@ -108,14 +108,6 @@ table .icon {
   color: #29E5F0;
 }
 
-.green {
-  color: #73c92d;
-}
-
-.pink {
-  color: #fc2458;
-}
-
 .modal .tingle-modal-box {
   width: 500px;
 }
@@ -153,7 +145,7 @@ sup {
   font-size: 0.5em;
 }
 
-.goalz p {
+.goalz svg {
   position: absolute;
   top: 46.5%;
   left: 50%;

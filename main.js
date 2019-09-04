@@ -178,11 +178,12 @@ squares.forEach(function (square, i) {
   if (!goal) return;
 
   var iconImg = '<img class="icon" src="./icons/' + goal.icon + '.png" alt="' + goal.title + '" />' + '<!-- ' + goal.attrib + '-->';
-
+  var iconImgGrey = '<img class="icon" src="./icons/' + goal.icon + '_grey.png" alt="' + goal.title + '" />' + '<!-- ' + goal.attrib + '-->';
+  var svgX = '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="100" x2="100" y2="0" stroke="#000" stroke-width="1" /><line x1="0" y1="0" x2="100" y2="100" stroke="#000" stroke-width="1" /></svg>'
+  var svgO = '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle stroke="#000" stroke-width="1" fill="none" cx="50" cy="50" r="49.5"/></svg>'
   square.innerHTML = dones[i]
-    ? '<img class="icon" src="./icons/' + goal.icon + '_grey.png" alt="' + goal.title + '" />' + '<!-- ' + goal.attrib + '-->'+
-          ((i % 2) ? '<p class="pink">X</p>' : '<p class="pink">O</p>')
-    : iconImg;
+    ? iconImg + ((i % 2) ? svgX : svgO)
+    : iconImgGrey;
 
   square.addEventListener('click', function () {
 
@@ -203,8 +204,7 @@ squares.forEach(function (square, i) {
       });
 
       modal.addFooterBtn('i did it!', 'tingle-btn tingle-btn--primary tingle-btn--pull-right', function () {
-        square.innerHTML = '<img class="icon" src="./icons/' + goal.icon + '_grey.png" alt="' + goal.title + '" />' + '<!-- ' + goal.attrib + '-->'+
-          ((i % 2) ? '<p class="pink">X</p>' : '<p class="pink">O</p>');
+        square.innerHTML = iconImg + ((i % 2) ? svgX : svgO);
 
         goal.isDone = true;
         dones[i] = true;
