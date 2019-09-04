@@ -179,8 +179,8 @@ squares.forEach(function (square, i) {
 
   var iconImg = '<img class="icon" src="./icons/' + goal.icon + '.png" alt="' + goal.title + '" />' + '<!-- ' + goal.attrib + '-->';
   var iconImgGrey = '<img class="icon" src="./icons/' + goal.icon + '_grey.png" alt="' + goal.title + '" />' + '<!-- ' + goal.attrib + '-->';
-  var svgX = '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="100" x2="100" y2="0" stroke="#000" stroke-width="1" /><line x1="0" y1="0" x2="100" y2="100" stroke="#000" stroke-width="1" /></svg>'
-  var svgO = '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle stroke="#000" stroke-width="1" fill="none" cx="50" cy="50" r="49.5"/></svg>'
+  var svgX = '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="100" x2="100" y2="0" stroke="#000" stroke-width="8" /><line x1="0" y1="0" x2="100" y2="100" stroke="#000" stroke-width="8" /></svg>'
+  var svgO = '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle stroke="#000" stroke-width="8" fill="none" cx="50" cy="50" r="46"/></svg>'
   square.innerHTML = dones[i]
     ? iconImg + ((i % 2) ? svgX : svgO)
     : iconImgGrey;
@@ -193,7 +193,7 @@ squares.forEach(function (square, i) {
     if (goal.isDone) {
       modal.addFooterBtn('i lied before. i didn\'t do it yet, sorry!', 'tingle-btn tingle-btn--danger', function () {
         goal.isDone = false;
-        square.innerHTML = iconImg;
+        square.innerHTML = iconImgGrey;
         dones[i] = false;
         localStorage.setItem('dones', JSON.stringify(dones));
         modal.close();
