@@ -132,10 +132,6 @@ table, .rulez {
   visibility: visible;
 }
 
-.tingle-modal-box__content {
-  padding-bottom: 1rem !important;
-}
-
 .tingle-modal-box__content p {
   text-align: center;
 }
