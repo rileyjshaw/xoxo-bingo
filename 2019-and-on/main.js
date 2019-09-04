@@ -16,7 +16,7 @@ var goalz = [
     icon: 'share',
     attrib: 'Illustrated by Julia Skott: juliaskott.com',
     title: 'share',
-    description: 'tell someone about xoxo who hasn\'t heard of it',
+    description: 'tell someone about XOXO who hasn\'t heard of it',
   },
   {
     icon: 'carriage',
@@ -208,6 +208,29 @@ squares.forEach(function (square, i) {
         goal.isDone = true;
         dones[i] = true;
         localStorage.setItem('dones', JSON.stringify(dones));
+
+        var row = Math.floor(i / 5);
+        var col = i % 5;
+        var diagDown = row === col;
+        var diagUp = row === 4 - col;
+        row *= 5; // Get the index of the first square in the row.
+
+        var rowBingo = (dones[row] && dones[row + 1] && dones[row + 2] && dones[row + 3] && dones[row + 4]);
+        var colBingo = (dones[col] && dones[col + 5] && dones[col + 10] && dones[col + 15] && dones[col + 20]);
+        var diagDownBingo = (diagDown && dones[0] && dones[6] && dones[12] && dones[18] && dones[24]);
+        var diagUpBingo = (diagUp && dones[4] && dones[8] && dones[12] && dones[16] && dones[20]);
+        var totalBingos = rowBingo + colBingo + diagDownBingo + diagUpBingo;
+        if (totalBingos) {
+          modal.setContent('<h1>' +
+            ['BINGOOOOOOO!', 'DOUBLE BINGOOOOOO!', 'TRIPLE BINGO!!!??!', 'QUADRUPLE BINGO!???!??!?!?!?!?'][totalBingos - 1] +
+          '</h1>' + '<p>' + (totalBingos === 1
+            ? 'CONGRATULATIONS you got a bingo! savor this moment. soak it in. scream out. do a dance if you wanna.'
+            : 'a true bingo master! one at a time wasn\'t enough, you had to get ' + ['two', 'three', 'four'][totalBingos - 2] + ' at once. we are humbled and amazed.'
+          ) + '</p><p>thanks for playing our bingo game &lt;3</p>');
+          modal.setFooterContent('');
+          modal.addFooterBtn('keep playing', 'tingle-btn tingle-btn--primary tingle-btn--fullwidth', modal.close.bind(modal));
+          return;
+        }
 
         modal.close();
       });
