@@ -106,7 +106,7 @@ var goalz = [
     icon: 'fan',
     attrib: 'Illustrated by Julia Skott: juliaskott.com',
     title: 'new fan',
-    description: 'add a book/artwork/album/game to a wishlist after meeting the person who made it',
+    description: 'add a book / artwork / album / game to a wishlist after meeting the person who made it',
   },
   {
     icon: 'eat',
@@ -186,7 +186,6 @@ squares.forEach(function (square, i) {
     : iconImgGrey;
 
   square.addEventListener('click', function () {
-
     modal.setContent('<h1>' + iconImg + '<span>' + goal.title + '</span>' + '</h1><p>' + goal.description + '</p>');
     modal.setFooterContent('');
 
