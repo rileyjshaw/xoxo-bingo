@@ -181,3 +181,7 @@ sup {
   align-items: center;
   flex-wrap: wrap;
 }
+
+.tingle-btn--fullwidth {
+  width: 100%;
+}
