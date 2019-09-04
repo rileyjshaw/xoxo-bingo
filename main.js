@@ -15,8 +15,8 @@ var goalz = [
   {
     icon: 'share',
     attrib: 'Illustrated by Julia Skott: juliaskott.com',
-    title: 'zzz',
-    description: 'lie down in the chill room!',
+    title: 'share',
+    description: 'tell someone about xoxo who hasn\'t heard of it',
   },
   {
     icon: 'carriage',
