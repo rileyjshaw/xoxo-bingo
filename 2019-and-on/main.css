@@ -108,7 +108,7 @@ a, .teal {
 }
 
 .modal .tingle-modal-box {
-  width: 500px;
+  max-width: 500px;
 }
 
 .modal img {
