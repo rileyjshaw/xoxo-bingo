@@ -193,7 +193,7 @@ squares.forEach(function (square, i) {
     if (goal.isDone) {
       modal.addFooterBtn('i lied before. i didn\'t do it yet, sorry!', 'tingle-btn tingle-btn--danger', function () {
         goal.isDone = false;
-        square.innerHTML = iconImg;
+        square.innerHTML = iconImgGrey;
         dones[i] = false;
         localStorage.setItem('dones', JSON.stringify(dones));
         modal.close();
