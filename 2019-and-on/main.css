@@ -96,7 +96,7 @@ td {
 }
 
 .icon {
-  width: 40px;
+  width: 80px;
 }
 
 table .icon {
@@ -159,16 +159,25 @@ sup {
   padding: 1em 0;
 }
 
+.rulez .icon {
+  margin: 12px;
+}
+
 .rulez img, .rulez strong {
   display: inline;
-  vertical-align: middle;
 }
 
 .rulez strong {
-  margin-left: .6em;
   font-size: 1.5em;
 }
 
 .end {
   text-align: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
