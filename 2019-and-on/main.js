@@ -112,13 +112,13 @@ var goalz = [
     icon: 'eat',
     attrib: 'Illustrated by Julia Skott: juliaskott.com',
     title: 'eat and greet',
-    description: 'have a meal with people who are complete strangers/future friends',
+    description: 'have a meal with people who are complete strangers / future friends',
   },
   {
     icon: 'bird',
     attrib: 'Illustrated by Julia Skott: juliaskott.com',
     title: 'put a bird on it',
-    description: 'do a "portland thing"! control the panic sign with your phone, ground kontrol, ...etc.',
+    description: 'do a portland thing! control the panic sign with your phone, ground kontrol, get a donut… etc.',
   },
   {
     icon: 'linguist',
