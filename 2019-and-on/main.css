@@ -58,10 +58,6 @@ ul {
   padding: 0;
 }
 
-/*li:before {
-  content: '- ';
-}*/
-
 td a {
   position: relative;
   display: block;
@@ -109,7 +105,7 @@ table .icon {
 }
 
 .teal {
-  color: #0098a5;
+  color: #29E5F0;
 }
 
 .green {
