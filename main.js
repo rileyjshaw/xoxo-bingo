@@ -216,7 +216,7 @@ squares.forEach(function (square, i) {
     modal.open();
   }, false);
 
-  rulez.innerHTML += '<li>' + iconImg + '<strong>' + goal.title + '</strong><p>' + goal.description + '</p></li>';
+  rulez.innerHTML += '<li><div class="title">' + iconImg + '<strong>' + goal.title + '</strong></div><p>' + goal.description + '</p></li>';
 });
 
 rulez.innerHTML += '<li></li>';
