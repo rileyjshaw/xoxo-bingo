@@ -179,10 +179,10 @@ squares.forEach(function (square, i) {
 
   var iconImg = '<img class="icon" src="./icons/' + goal.icon + '.png" alt="' + goal.title + '" />' + '<!-- ' + goal.attrib + '-->';
   var iconImgGrey = '<img class="icon" src="./icons/' + goal.icon + '_grey.png" alt="' + goal.title + '" />' + '<!-- ' + goal.attrib + '-->';
-  var svgX = '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="100" x2="100" y2="0" stroke="#000" stroke-width="8" /><line x1="0" y1="0" x2="100" y2="100" stroke="#000" stroke-width="8" /></svg>'
-  var svgO = '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle stroke="#000" stroke-width="8" fill="none" cx="50" cy="50" r="46"/></svg>'
+  var svgX = '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><line x1="15" y1="85" x2="85" y2="15" stroke="#000" stroke-width="8" /><line x1="15" y1="15" x2="85" y2="85" stroke="#000" stroke-width="8" /></svg>'
+  var svgO = '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle stroke="#000" stroke-width="8" fill="none" cx="50" cy="50" r="36"/></svg>'
   square.innerHTML = dones[i]
-    ? iconImg + ((i % 2) ? svgX : svgO)
+    ? iconImg + ((i % 2) ? svgO : svgX)
     : iconImgGrey;
 
   square.addEventListener('click', function () {
