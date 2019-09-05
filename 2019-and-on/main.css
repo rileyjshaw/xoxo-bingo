@@ -21,10 +21,9 @@ table {
   width: 100%;
 }
 
-h2 {
-  text-align: center;
-  color: darkgrey;
-  font-size: 10px;
+/* HACK: Adjust apparent vertical center. */
+.tingle-btn {
+  padding-top: 1.2rem !important;
 }
 
 .tingle-modal-box__footer {
@@ -38,18 +37,7 @@ table a {
 
 h1 {
   text-align: center;
-  font-size: 42px;
-}
-
-h2 {
-  text-align: center;
-  color: #000;
-  background: #fff;
-  padding: 0.4em;
-  position: absolute;
-  bottom: 5px;
-  left: 0px;
-  margin: 0;
+  font-size: 1em;
 }
 
 ul {
@@ -60,16 +48,6 @@ ul {
 td a {
   position: relative;
   display: block;
-}
-
-.logout {
-  display: block;
-  text-align: center;
-  padding-top: 16px;
-}
-
-.divider {
-  text-align: center;
 }
 
 .logo {
@@ -92,7 +70,7 @@ td {
   align-items: center;
   justify-content: center;
   position: relative;
-  font-size: 16px;
+  font-size: 0.6em;
 }
 
 .icon {
@@ -107,8 +85,8 @@ a, .teal {
   color: #29E5F0;
 }
 
-.modal .tingle-modal-box {
-  max-width: 500px;
+.tingle-modal-box {
+  width: 500px;
 }
 
 .modal img {
@@ -144,7 +122,7 @@ sup {
   position: absolute;
   top: 46.5%;
   left: 50%;
-  font-size: 48px;
+  font-size: 1em;
   transform: translate(-50%, -50%);
   margin: 0;
   font-weight: 900;
@@ -168,7 +146,7 @@ sup {
 }
 
 .rulez strong {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .end {
@@ -184,4 +162,14 @@ sup {
 
 .tingle-btn--fullwidth {
   width: 100%;
+}
+
+@media only screen and (max-width: 540px) {
+  body {
+    font-size: 1.5em;
+  }
+
+  .tingle-modal-box {
+    width: auto;
+  }
 }
