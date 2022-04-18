@@ -1,14 +1,14 @@
 ```
-beepity bleepbloop doin' things at ❌⭕️❌️⭕️!
-
-hey look! it's http://bingoxo.club!
+doin' bingo at ❌⭕️❌️⭕️! hey look! it's http://bingoxo.club!
 
 
-HACKIN' ON IT
+HACKING ON IT
 -------------
 
 git clone https://github.com/rileyjshaw/xoxo-bingo.git
-cd xoxo-bingo
+cd xoxo-bingo/pre-2019
+mv old.package.json package.json
+mv old.package.lock package.lock
 npm i
 # hack, hack, hack away!
 
