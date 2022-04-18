@@ -215,10 +215,10 @@ squares.forEach(function (square, i) {
         var diagUp = row === 4 - col;
         row *= 5; // Get the index of the first square in the row.
 
-        var rowBingo = (dones[row] && dones[row + 1] && dones[row + 2] && dones[row + 3] && dones[row + 4]);
-        var colBingo = (dones[col] && dones[col + 5] && dones[col + 10] && dones[col + 15] && dones[col + 20]);
-        var diagDownBingo = (diagDown && dones[0] && dones[6] && dones[12] && dones[18] && dones[24]);
-        var diagUpBingo = (diagUp && dones[4] && dones[8] && dones[12] && dones[16] && dones[20]);
+        var rowBingo = !!(dones[row] && dones[row + 1] && dones[row + 2] && dones[row + 3] && dones[row + 4]);
+        var colBingo = !!(dones[col] && dones[col + 5] && dones[col + 10] && dones[col + 15] && dones[col + 20]);
+        var diagDownBingo = !!(diagDown && dones[0] && dones[6] && dones[12] && dones[18] && dones[24]);
+        var diagUpBingo = !!(diagUp && dones[4] && dones[8] && dones[12] && dones[16] && dones[20]);
         var totalBingos = rowBingo + colBingo + diagDownBingo + diagUpBingo;
         if (totalBingos) {
           modal.setContent('<h1>' +
